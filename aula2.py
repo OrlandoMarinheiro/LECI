@@ -17,6 +17,10 @@ ex5 = None
 def quantificador_universal(lista, f):
     pass
 
+#Exercicio 4.8
+def subconjunto(lista1, lista2):
+    pass
+
 #Exercicio 4.9
 def menor_ordem(lista, f):
     pass
