@@ -18,11 +18,11 @@ def quantificador_universal(lista, f):
     pass
 
 #Exercicio 4.9
-def ordem(lista, f):
+def menor_ordem(lista, f):
     pass
 
 #Exercicio 4.10
-def filtrar_ordem(lista, f):
+def menor_e_resto_ordem(lista, f):
     pass
 
 #Exercicio 5.2
