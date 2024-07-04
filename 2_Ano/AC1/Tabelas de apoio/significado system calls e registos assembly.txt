@@ -1,0 +1,11 @@
+.space -> alocar memoria sem inicializar os bytes | .space 21 -> alocar 21 bytes
+.word -> alocar memoria já com valores especificos | .word 7692,23,5,234 -> alocar os bytes necessários para estes valores
+.eqv -> criar simbolos que representem constantes
+.align -> 
+
+sb -> substitui o byte existente
+
+lw $registo_destino, offset($registo_base)
+sw $registo_origem, offset($registo_base)
+
+move -> copiar valores entre registos

@@ -1,0 +1,21 @@
+NAME | NUMBER | VALUE
+
+$t1 | 9 | 0x0000000e  x = 3
+$t1 | 9 | 0x0000001a  x = 9
+$t1 | 9 | 0x000000d0  x= 100
+
+2 a) para x = 3, y = 0xfffffffe | -2
+     para x = 5, y = 0x00000002 |  2
+
+3 a) para x = 3, y = -2
+     para x = 5, y = 2
+
+c) para x = 2, y = 0xfffffffc 
+   para x = 3, y = 0xfffffffe
+   para x = 4, y = 0x00000000
+   para x = 5, y = 0x00000002
+
+d) para x = 2, y = 4294967292
+   para x = 3, y = 4294967294
+   para x = 4, y = 0
+   para x = 5, y = 2
