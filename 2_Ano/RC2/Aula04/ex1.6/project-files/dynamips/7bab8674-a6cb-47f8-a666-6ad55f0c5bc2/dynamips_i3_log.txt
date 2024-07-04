@@ -1,0 +1,69 @@
+Mar 05 15:53:11.218 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Mar 05 15:53:11.220 HYPERVISOR: Started on IP = localhost, TCP port = 64433.
+Mar 05 15:53:11.694 HYPERVISOR: exec_cmd: hypervisor version 
+Mar 05 15:53:11.696 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\omari\OneDrive\Desktop\UA\2 ano\2 semestre\RC-II\Aulas praticas\Aula04\ex1.6\project-files\dynamips 
+Mar 05 15:53:11.696 GENERAL: working_dir=C:\Users\omari\OneDrive\Desktop\UA\2 ano\2 semestre\RC-II\Aulas praticas\Aula04\ex1.6\project-files\dynamips
+Mar 05 15:53:11.697 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\omari\OneDrive\Desktop\UA\2 ano\2 semestre\RC-II\Aulas praticas\Aula04\ex1.6\project-files\dynamips\2c1cede9-e0f2-4163-8733-bf686b0e1f6f 
+Mar 05 15:53:11.702 GENERAL: working_dir=C:\Users\omari\OneDrive\Desktop\UA\2 ano\2 semestre\RC-II\Aulas praticas\Aula04\ex1.6\project-files\dynamips\2c1cede9-e0f2-4163-8733-bf686b0e1f6f
+Mar 05 15:53:11.702 HYPERVISOR: exec_cmd: vm create R1 1 c3725 
+Mar 05 15:53:11.706 VM: VM R1 created.
+Mar 05 15:53:11.707 HYPERVISOR: exec_cmd: vm set_con_tcp_port R1 5014 
+Mar 05 15:53:11.708 HYPERVISOR: exec_cmd: c3725 get_mac_addr R1 
+Mar 05 15:53:11.709 HYPERVISOR: exec_cmd: vm set_disk0 R1 0 
+Mar 05 15:53:11.710 HYPERVISOR: exec_cmd: vm set_exec_area R1 64 
+Mar 05 15:53:11.712 HYPERVISOR: exec_cmd: vm get_status R1 
+Mar 05 15:53:11.713 HYPERVISOR: exec_cmd: vm set_idle_pc R1 0x602467a4 
+Mar 05 15:53:11.716 HYPERVISOR: exec_cmd: vm set_ios R1 C:/Users/omari/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21.image 
+Mar 05 15:53:11.718 HYPERVISOR: exec_cmd: c3725 set_mac_addr R1 c201.4d14.0000 
+Mar 05 15:53:11.719 HYPERVISOR: exec_cmd: vm set_nvram R1 256 
+Mar 05 15:53:11.721 HYPERVISOR: exec_cmd: vm get_status R1 
+Mar 05 15:53:11.721 HYPERVISOR: exec_cmd: vm slot_add_binding R1 1 0 NM-1FE-TX 
+Mar 05 15:53:11.723 HYPERVISOR: exec_cmd: vm get_status R1 
+Mar 05 15:53:11.723 HYPERVISOR: exec_cmd: vm slot_add_binding R1 2 0 NM-1FE-TX 
+Mar 05 15:53:16.250 HYPERVISOR: exec_cmd: nio create_udp udp-6bff7ea3-ef67-4fdd-94d2-33cfe354d3f9 20004 127.0.0.1 20005 
+Mar 05 15:53:16.569 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 1 0 udp-6bff7ea3-ef67-4fdd-94d2-33cfe354d3f9 
+Mar 05 15:53:16.570 HYPERVISOR: exec_cmd: vm get_status R1 
+Mar 05 15:53:16.858 HYPERVISOR: exec_cmd: nio create_udp udp-b927db03-27a8-4256-ad3b-e084c8788d43 20008 127.0.0.1 20009 
+Mar 05 15:53:16.890 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 0 1 udp-b927db03-27a8-4256-ad3b-e084c8788d43 
+Mar 05 15:53:16.892 HYPERVISOR: exec_cmd: vm get_status R1 
+Mar 05 15:53:18.263 HYPERVISOR: exec_cmd: nio create_udp udp-6ee5cf31-7cf9-4075-af86-8e13a25fb57d 20020 127.0.0.1 20021 
+Mar 05 15:53:18.267 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 0 0 udp-6ee5cf31-7cf9-4075-af86-8e13a25fb57d 
+Mar 05 15:53:18.268 HYPERVISOR: exec_cmd: vm get_status R1 
+Mar 05 15:53:22.944 HYPERVISOR: exec_cmd: vm create Ghost 0 c3725 
+Mar 05 15:53:22.950 VM: VM Ghost created.
+Mar 05 15:53:22.960 HYPERVISOR: exec_cmd: vm set_ios Ghost C:/Users/omari/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21.image 
+Mar 05 15:53:22.965 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Mar 05 15:53:22.970 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost C:\Users\omari\OneDrive\Desktop\UA\2 ano\2 semestre\RC-II\Aulas praticas\Aula04\ex1.6\project-files\dynamips\c3725-advipservicesk9-mz.124-21.image-128.ghost 
+Mar 05 15:53:22.974 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Mar 05 15:53:22.984 HYPERVISOR: exec_cmd: vm set_config Ghost configs\i0_startup-config.cfg 
+Mar 05 15:53:22.985 HYPERVISOR: exec_cmd: vm start Ghost 
+Mar 05 15:53:23.554 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Mar 05 15:53:23.558 HYPERVISOR: exec_cmd: vm stop Ghost 
+Mar 05 15:53:23.707 VM: VM Ghost shutdown.
+Mar 05 15:53:23.708 HYPERVISOR: exec_cmd: vm extract_config Ghost 
+Mar 05 15:53:23.713 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Mar 05 15:53:23.714 VM: VM Ghost destroyed.
+Mar 05 15:53:23.724 HYPERVISOR: exec_cmd: vm set_ghost_status R1 2 
+Mar 05 15:53:23.726 HYPERVISOR: exec_cmd: vm set_ghost_file R1 C:\Users\omari\OneDrive\Desktop\UA\2 ano\2 semestre\RC-II\Aulas praticas\Aula04\ex1.6\project-files\dynamips\c3725-advipservicesk9-mz.124-21.image-128.ghost 
+Mar 05 15:53:23.727 HYPERVISOR: exec_cmd: vm get_status R1 
+Mar 05 15:53:23.749 HYPERVISOR: exec_cmd: vm set_config R1 configs\i1_startup-config.cfg 
+Mar 05 15:53:23.751 HYPERVISOR: exec_cmd: vm start R1 
+Mar 05 15:58:54.504 HYPERVISOR: exec_cmd: vm extract_config R1 
+Mar 05 15:58:54.618 HYPERVISOR: exec_cmd: vm extract_config R1 
+Mar 05 16:01:24.622 HYPERVISOR: exec_cmd: vm extract_config R1 
+Mar 05 16:01:24.642 HYPERVISOR: exec_cmd: vm extract_config R1 
+Mar 05 16:03:24.702 HYPERVISOR: exec_cmd: vm extract_config R1 
+Mar 05 16:03:24.724 HYPERVISOR: exec_cmd: vm extract_config R1 
+Mar 05 16:15:29.635 HYPERVISOR: exec_cmd: vm get_status R1 
+Mar 05 16:15:29.636 HYPERVISOR: exec_cmd: vm stop R1 
+Mar 05 16:15:29.805 VM: VM R1 shutdown.
+Mar 05 16:15:29.807 HYPERVISOR: exec_cmd: vm extract_config R1 
+Mar 05 16:16:20.604 HYPERVISOR: exec_cmd: vm get_status R1 
+Mar 05 16:16:20.613 HYPERVISOR: exec_cmd: vm extract_config R1 
+Mar 05 16:16:21.006 HYPERVISOR: exec_cmd: vm get_status R1 
+Mar 05 16:16:21.008 HYPERVISOR: exec_cmd: vm extract_config R1 
+Mar 05 16:16:21.015 HYPERVISOR: exec_cmd: vm delete R1 
+Mar 05 16:16:21.015 VM: VM R1 destroyed.
+Mar 05 16:16:21.019 HYPERVISOR: exec_cmd: hypervisor stop 
+Mar 05 16:16:21.484 HYPERVISOR: Stopped.
+Mar 05 16:16:21.484 GENERAL: reset done.

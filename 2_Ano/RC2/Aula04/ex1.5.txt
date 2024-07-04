@@ -1,0 +1,29 @@
+>> Determine the type of RIP packets sent by each router and its periodicity.
+#Router 1 to netC: O tipo dos pacotes RIP é "Response" e a sua periodicidade é:
+		- aproximadamente 26 segundos (10.1.3.1 -> 224.0.0.9 (multicast))
+		- aproximadamente 25 segundos (10.1.3.3 -> 224.0.0.9 (multicast))
+
+#Router 1 to netA: O tipo dos pacotes RIP é "Response" e a sua periodicidade é:
+		- aproximadamente 30 segundos (10.1.2.1 -> 224.0.0.9 (multicast))
+		- aproximadamente 27 segundos (10.1.2.2 -> 224.0.0.9 (multicast))
+
+#Router 2 to netB: O tipo dos pacotes RIP é "Response" e a sua periodicidade é:
+		- aproximadamente 28 segundos (10.2.3.1 -> 224.0.0.9 (multicast))
+		- aproximadamente 26 segundos (10.2.3.3 -> 224.0.0.9 (multicast))
+
+*NOTA -> endereço 224.0.0.9 é um endereço multicast reservado especificamente para o protocolo RIPv2.
+
+>> Determine the IPv4 destination address, transport protocol and port numbers used by RIPv1.
+	- O endereço de destino é o broadcast (224.0.0.9)
+	- Protocolo de transporte é UDP
+	- Port numbers: Src Port: 520 / Dst Port: 520
+
+>> Identify the RIP Update packet fields from RIPv2 that were nor present in RIPv1.
+	- Route Tag
+	- Netmask
+	- Next Hop
+
+>> Explain the contents of RIPv2 packets, namely network prefixes and costs.
+
+O RIPv2 funciona fazendo com que os routers anunciem as redes que a eles tem acesso. 
+A rede anunciada numa interface X teve que ter sido recebida por uma interface != X.

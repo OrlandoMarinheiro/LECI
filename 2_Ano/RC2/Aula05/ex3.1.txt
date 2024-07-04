@@ -1,0 +1,3 @@
+>> Explain the reasons to have connectivity between some interfaces and not others
+Como apenas os ips das interfaces de cada router estão definidos, apenas haverá conectividade entre as interfaces desse mesmo router.
+Não existe conectividade entre interfaces de diferentes routers, pois as rotas não estão definidas e o router não sabe por onde encaminhar os pacotes.

@@ -1,0 +1,2 @@
+Ao fazer ping, só existe conectividade entre o pc1 e pc4, pois estes estão na mesma vlan.
+Para o resto dos pcs, ao realizar um ping dá "not reachable".

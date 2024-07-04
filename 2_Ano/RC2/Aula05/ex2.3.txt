@@ -1,0 +1,8 @@
+>> Explain the differences (if any) on the choice of DR/BDR.
+
+Primeiramente é feita uma lista dos routers pertencentes à rede e são descartados os routers com prioridade 0.
+Apenas os routers que não se declaram como DR, podem ser elegiveis para BDR.
+Caso mais que um se tenha declarado como BDR, vence o que tem maior prioridade. No caso de estarem empatados, vence o que tiver maior ID.
+No caso de ninguém se ter candidatado como BDR, o router com maior prioridade da lista é eleito. No caso de empate, vence o com maior ID.
+
+Neste caso, ao definir os IDs manualmente, estes passaram a ser substituídos nas tabelas de routeamento.

@@ -1,0 +1,9 @@
+1.2)
+>> Verify and justify the routing tables obtained at all routers.
+As routing tables contêm as sub-redes da network, pois o protocolo RIP está ativado em todas elas
+
+>> Explain why network 192.168.3.0/25 appears with the wrong mask in Router 1 and 2.
+A network 192.168.3.0/25 aparece com a máscara errada, pois está a ser usada a versão 1 do RIP o que não anuncia as máscaras das sub-redes.
+
+>> Explain how routers define the network masks of the networks announced with RIPv1
+As máscaras das redes são assumidas com base na mascara da interface de receção

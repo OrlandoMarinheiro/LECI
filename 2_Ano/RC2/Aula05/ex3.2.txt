@@ -1,0 +1,3 @@
+>> Explain the path cost of each route learned using RIPng. How it is different from RIPv1/v2?
+O RIPng oferece suporte a endereços ipv6, enquanto que o RIPv1/v2 oferece apenas suporte para ipv4.
+O custo de uma rota RIPng é determinado pelo número de routers que devem ser ultrapassados até alcançar o destino.

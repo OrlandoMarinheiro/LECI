@@ -1,0 +1,11 @@
+>> Register and justify the routing tables obtained at all routers.
+
+Como a interface f0/0 do router 1 foi desativada, a routing table de R1 terá que ser atualizada com a nova métrica 
+disponível para a rede destino.
+
+>> By analyzing the captured packets, explain how RIP protocol propagated the information after the network
+failure
+
+Após a falha da rede e a desativação da interface do Router 1 com a rede C, 
+o protocolo RIP entra em ação para informar a todos os outros roteadores na rede sobre a falha e ajustar as rotas de encaminhamento de acordo. 
+Isso garante que a rede se adapte dinamicamente a mudanças na topologia e continue a funcionar eficientemente.

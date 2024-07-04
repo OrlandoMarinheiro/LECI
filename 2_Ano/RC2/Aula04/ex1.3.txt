@@ -1,0 +1,18 @@
+>> Determine the type of RIP packets sent by each router and its periodicity.
+#Router 1 to netC: O tipo dos pacotes RIP é "Response" e a sua periodicidade é:
+		- aproximadamente 28 segundos (10.1.3.1 -> 255.255.255.255 (broadcast))
+		- aproximadamente 27 segundos (10.1.3.3 -> 255.255.255.255 (broadcast))
+
+#Router 1 to netA: O tipo dos pacotes RIP é "Response" e a sua periodicidade é:
+		- aproximadamente 27 segundos (10.1.2.1 -> 255.255.255.255 (broadcast))
+		- aproximadamente 28 segundos (10.1.2.2 -> 255.255.255.255 (broadcast))
+
+#Router 2 to netB: O tipo dos pacotes RIP é "Response" e a sua periodicidade é:
+		- aproximadamente 27 segundos (10.2.3.1 -> 255.255.255.255 (broadcast))
+		- aproximadamente 28 segundos (10.2.3.3 -> 255.255.255.255 (broadcast))
+
+>> Determine the IPv4 destination address, transport protocol and port numbers used by RIPv1.
+	- O endereço de destino é o broadcast (255.255.255.255)
+	- Protocolo de transporte é UDP
+	- Port numbers: Src Port: 520 / Dst Port: 520
+

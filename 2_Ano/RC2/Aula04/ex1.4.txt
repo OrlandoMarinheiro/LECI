@@ -1,0 +1,5 @@
+>> Explain why all network mask appear correctly in all routing tables´
+Ao contrário do RIPv1, no protocolo RIPv2 todas as máscaras de rede aparecem corretamente
+em todas as tabelas de roteamento devido a uma caracteristica especifica deste mesmo protocolo:
+	- A inclusão de informações de máscara de sub-redes nos anúncios de roteamento.
+

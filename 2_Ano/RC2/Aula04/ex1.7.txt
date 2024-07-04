@@ -1,0 +1,7 @@
+>> Explain why Router 1 does not have any routes to network B learned with RIP
+Como está a ser definida uma rota estática, qualquer tráfego destinado para a rede B, será sempre encaminhado pelo router 2.
+
+>> Explain the importance of the administrative distance metric.
+A métrica de distância administrativa é importante porque determina a preferência de uma rota sobre outra num router.
+É uma medida que o router usa para decidir qual rota usar quando múltiplas rotas para o mesmo destino são aprendidas de diferentes fontes. 
+Quanto menor a métrica de distância administrativa, mais confiável e preferida é a fonte da rota.

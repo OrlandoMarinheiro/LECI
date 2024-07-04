@@ -1,0 +1,7 @@
+>> Explain how the administrative distance works.
+
+No exemplo fornecido, ao reconfigurar a rota estática em Router1 para a rede B via Router2 com uma distância administrativa de 200,
+estamos instruindo o Router1 a considerar essa rota como menos preferível em comparação com outras rotas disponíveis para a mesma rede. 
+Isso significa que, se houver outras rotas para a rede B, com uma distância administrativa menor do que 200, 
+o Router1 preferirá essas rotas em vez da rota configurada com uma distância administrativa de 200.
+

@@ -1,0 +1,15 @@
+Mar 05 12:05:11.836 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Mar 05 12:05:11.838 HYPERVISOR: Started on IP = localhost, TCP port = 61927.
+Mar 05 12:05:12.318 HYPERVISOR: exec_cmd: hypervisor version 
+Mar 05 12:05:12.320 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\omari\OneDrive\Desktop\UA\2 ano\2 semestre\RC-II\Aulas praticas\Aula04\ex1\project-files\dynamips 
+Mar 05 12:05:12.320 GENERAL: working_dir=C:\Users\omari\OneDrive\Desktop\UA\2 ano\2 semestre\RC-II\Aulas praticas\Aula04\ex1\project-files\dynamips
+Mar 05 12:05:12.321 HYPERVISOR: exec_cmd: ethsw create Switch2 
+Mar 05 12:05:17.952 HYPERVISOR: exec_cmd: nio create_udp udp-0c17a590-6065-47e8-8d3a-145d0da0ff83 20015 127.0.0.1 20014 
+Mar 05 12:05:17.953 HYPERVISOR: exec_cmd: ethsw add_nio Switch2 udp-0c17a590-6065-47e8-8d3a-145d0da0ff83 
+Mar 05 12:05:17.965 HYPERVISOR: exec_cmd: ethsw set_access_port Switch2 udp-0c17a590-6065-47e8-8d3a-145d0da0ff83 1 
+Mar 05 14:20:26.111 HYPERVISOR: exec_cmd: nio bind_filter udp-0c17a590-6065-47e8-8d3a-145d0da0ff83 2 capture 
+Mar 05 14:20:26.113 HYPERVISOR: exec_cmd: nio setup_filter udp-0c17a590-6065-47e8-8d3a-145d0da0ff83 2 en10mb C:\Users\omari\OneDrive\Desktop\UA\2 ano\2 semestre\RC-II\Aulas praticas\Aula04\ex1\project-files\captures\R2_FastEthernet10_to_Switch2_Ethernet1.pcap 
+Mar 05 14:46:35.254 HYPERVISOR: exec_cmd: ethsw delete Switch2 
+Mar 05 14:46:35.276 HYPERVISOR: exec_cmd: hypervisor stop 
+Mar 05 14:46:35.538 HYPERVISOR: Stopped.
+Mar 05 14:46:35.546 GENERAL: reset done.

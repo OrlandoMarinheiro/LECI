@@ -1,0 +1,5 @@
+>> Compare the structure of OSPFv2 and OSPFv3 databases.
+OSPFv2 foi projetado para suportar ipv4 e o OSPFv3 para ipv6.
+A principal diferença está na estrutura dos LSAs e nas informações contidas neles.
+
+>> Why there no IPv6 references/addresses on the network and router databases?
