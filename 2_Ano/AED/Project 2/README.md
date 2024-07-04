@@ -1,3 +1,5 @@
-[![Review Assignment Due Date](https://classroom.githexample1.o Graph.o SortedList.oub.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/YI9dkc-z)
-# aed-trab2-template
-Template for AED 2023-2024 Trabalho 2
+# Project 2 - Algorithms and Data Structures
+
+## Objective:
+* Develop 3 algorithms to determine the topological sorting of the vertices of a directed graph, if it exists.
+* Characterize the algorithmic complexity of the implemented topological sorting solutions.
