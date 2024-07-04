@@ -1,0 +1,18 @@
+GAS LISTING ex2.s 			page 1
+
+
+DEFINED SYMBOLS
+               ex2.s:5      *ABS*:0000000000000003 put_char
+               ex2.s:6      *ABS*:0000000000000006 print_int
+               ex2.s:7      *ABS*:000000000000000c reset_core_timer
+               ex2.s:8      *ABS*:000000000000000b read_core_timer
+               ex2.s:9      *ABS*:0000000000000008 print_string
+               ex2.s:10     *ABS*:0000000000000005 read_int
+               ex2.s:12     .data:0000000000000000 str
+               ex2.s:15     .text:0000000000000000 main
+               ex2.s:30     .text:000000000000002c while
+               ex2.s:58     .text:0000000000000078 delay
+               ex2.s:61     .text:0000000000000080 while2
+               ex2.s:67     .text:00000000000000a0 endwhile2
+
+NO UNDEFINED SYMBOLS
