@@ -43,7 +43,7 @@ def capicua(lista):
 		return True
 	
 	if lista[0] == lista[-1]:
-		sublista_sem_extremos = capicua(lista[1:-1])
+		capicua(lista[1:-1])
 		return True
 	else:
 		return False
@@ -84,12 +84,11 @@ def lista_subconjuntos(lista): # lista = [1, 2, 3]
 	if lista == []:
 		return [[]]
 	
-	subconjunto_sem_primeiro = lista_subconjuntos(lista[1:])   # [2, 3] [3]
+	subconjunto1 = lista_subconjuntos(lista[1:])   # [2, 3] [3]
 	
-	subconjunto_com_primeiro = [[lista[0]] + subconjunto for subconjunto in subconjunto_sem_primeiro]
-	
-	
-	return subconjunto_sem_primeiro + subconjunto_com_primeiro
+	subconjunto2 = [[lista[0]] + x for x in subconjunto1]
+	return subconjunto1 + subconjunto2
+
 #Exercicio 2.1
 def separar(lista):
 	if lista == []:
@@ -174,19 +173,61 @@ def max_min(lista):
 
 	return maior_numero, menor_numero
 
-'''def main():
-	print(capicua([1,3,2]))
-	print(concat([], []))
-	print(concat_listas([[1,2],[5,4],[9,4]]))
-	print(concat_listas([[],[5,4],[9,4]]))
-	print(substitui([1,2,3,4,3,5,3], 3, 7))
-	print(fusao_ordenada([1,4,7], [2,3]))
-	print(lista_subconjuntos([1,2,3]))
-	print(separar([(1,2),(2,5),(4,7)]))
-	print(remove_e_conta([1,2,2,3,3,4], 2))
-	print(juntar([1,2,3], ['a','b','c']))
-	print(menor([3,5,1,2]))
-	print(max_min([3,1,5,9,2,6]))
+
+def main():
+    print("## Exercicio 1.1 ##")
+    print(comprimento([1, 2, 3]))
+
+    print("\n## Exercicio 1.2 ##")
+    print(soma([1, 2, 3, 4]))
+
+    print("\n## Exercicio 1.3 ##")
+    print(existe([1, 2, 3, 4], 3))
+    print(existe([1, 2, 3, 4], 5))
+
+    print("\n## Exercicio 1.4 ##")
+    print(concat([1, 2], [3, 4]))
+
+    print("\n## Exercicio 1.5 ##")
+    print(inverte([1, 2, 3, 4]))
+
+    print("\n## Exercicio 1.6 ##")
+    print(capicua([1, 2, 1]))
+    print(capicua([1, 2, 3]))
+
+    print("\n## Exercicio 1.7 ##")
+    print(concat_listas([[1, 2], [3, 4], [5]]))
+
+    print("\n## Exercicio 1.8 ##")
+    print(substitui([1, 2, 3, 2, 4], 2, 5))
+
+    print("\n## Exercicio 1.9 ##")
+    print(fusao_ordenada([1, 3, 5], [2, 4, 6]))
+
+    print("\n## Exercicio 1.10 ##")
+    print(lista_subconjuntos([1, 2, 3]))
+
+    print("\n## Exercicio 2.1 ##")
+    print(separar([(1, 2), (2, 5), (4, 7)]))
+
+    print("\n## Exercicio 2.2 ##")
+    print(remove_e_conta([1, 2, 2, 3, 4], 2))
+
+    print("\n## Exercicio 3.1 ##")
+    print(cabeca([1, 2, 3]))
+
+    print("\n## Exercicio 3.2 ##")
+    print(cauda([1, 2, 3]))
+
+    print("\n## Exercicio 3.3 ##")
+    print(juntar([1, 2], ['a', 'b']))
+
+    print("\n## Exercicio 3.4 ##")
+    print(menor([3, 5, 1, 2]))
+
+    print("\n## Exercicio 3.6 ##")
+    print(max_min([3, 1, 5, 9, 2, 6]))
+
 if __name__ == "__main__":
     main()
-'''
+
