@@ -21,7 +21,8 @@ def quantificador_universal(lista, f):
 
 #Exercicio 4.8
 def subconjunto(lista1, lista2):
-    pass
+    
+    return 
 
 #Exercicio 4.9
 def menor_ordem(lista, f):
