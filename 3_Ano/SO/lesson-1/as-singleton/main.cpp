@@ -96,9 +96,20 @@ void menuChoiceLoad()
 
 /* ******************************************** */
 
+void testInsert(){
+    sllInsert(10, "Gestrudes");
+    sllInsert(3, "Antonio");
+    sllInsert(5, "Jose");
+    sllInsert(30, "Gustavo");
+    sllInsert(1, "Orlando Marinheiro");
+    sllPrint(stdout);
+
+}
+
 /* The main function */
 int main()
-{
+{   
+    testInsert();
     bool end = false;
     while (not end)
     {
