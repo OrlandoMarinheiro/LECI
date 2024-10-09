@@ -39,6 +39,7 @@ def subconj(lista1, lista2):
     return all(x in lista2 for x in lista1)
 
 def subconjunto(lista1, lista2):
+<<<<<<< HEAD
     if lista1 == []: #todo o conjunto vazio está inserido num outro conjunto
         return True
     if lista2 == []:
@@ -49,6 +50,10 @@ def subconjunto(lista1, lista2):
     return False
 
 
+=======
+    
+    return 
+>>>>>>> origin/main
 
 #Exercicio 4.9
 def menor_ordem(lista, f):
