@@ -1,7 +1,6 @@
-import pytest
+
 from cidades import SearchProblem, SearchTree, cidades_portugal
 
-@pytest.fixture
 def braga_faro():
     return SearchProblem(cidades_portugal,'Braga','Faro')
 
