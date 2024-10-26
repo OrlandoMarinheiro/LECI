@@ -14,12 +14,12 @@ soma_linhas = sum(PXY,2); % soma linhas probX
 
 fprintf("FMP marginal de X:\t");
 for i = 1:3
-    fprintf("f(%d) = %.2f\t", i, soma_linhas(i));
+    fprintf("f(%d) = %.2f\t", i - 1, soma_linhas(i));
 end
 
 fprintf("\nFMP marginal de Y:\t");
 for i = 1:3
-    fprintf("f(%d) = %.2f\t", i, soma_colunas(i));
+    fprintf("f(%d) = %.2f\t", i - 1, soma_colunas(i));
 end
 
 % representação massa probabilidade grafico stem
