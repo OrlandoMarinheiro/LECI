@@ -338,20 +338,18 @@ int main(int argc, char *argv[])
       patient_life(i);
    }*/
 
-   
-
    for (int i = 0; i < npatients; i++){
       thread_join(allpatients[i], NULL);
       //printf("Patient thread %d has terminated\n", i);
    }
 
 
+
    /* close fifos */
    close_pfifo(&hd->triage_queue);
    close_pfifo(&hd->doctor_queue);
    
-
-
+   
 
    for (int i = 0; i < nnurses; i++)
    {
@@ -364,6 +362,8 @@ int main(int argc, char *argv[])
       thread_join(doctors[i], NULL);
       //printf("Doctor thread %d has terminated\n", i);
    }
+   
+
 
 
    /* terminate simulation */
