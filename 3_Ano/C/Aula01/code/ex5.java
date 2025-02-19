@@ -80,8 +80,13 @@ public class ex5 {
                 }
                 j++; 
             }
-            if (currentNum > 0 && currentNum <= 9 && cnt > 1) {
+            if (cnt * currentNum >= result && result != 0) {
+                System.out.println("Número inválido");
+                return 0;
+            }
+            if (cnt >= 100) {
                 result += currentNum * cnt;
+
             } else {
                 result += currentNum;
             }  
