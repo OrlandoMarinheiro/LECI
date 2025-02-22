@@ -10,49 +10,40 @@ public class ex6 {
         
         HashMap<String, String> tradutor = new HashMap<String, String>();
 
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("-Dicionario para tradução -> dic1.txt)");
-        System.out.println("-Dicionario para definição -> dic2.txt)");
-        System.out.println("-Ficheiros de teste: texto.txt, texto2.txt");
-        System.out.println("Escolha uma opção:");
-        System.out.println("1 - Definição");
-        System.out.println("2 - Tradução");
-        System.out.println("0 - Sair");
-        int option = sc.nextInt();
-        sc.nextLine(); 
-
-        if (option == 0) {
-            sc.close();
-            return;
-        }
+        String input;
 
         if (args.length == 0) {
-            System.out.println("Nenhum ficheiro fornecido.");
+            Scanner sc = new Scanner(System.in);
+            input = sc.nextLine();
             sc.close();
-            return;
-        }
-
-        String input = args[0];
-        String[] args_in = input.split(" ");
-        String dict_path = String.format("files/%s", args_in[0]);
-        loadDictionary(dict_path, tradutor);
-        args_in = Arrays.copyOfRange(args_in, 1, args_in.length);
-
-        if (option == 1) {
-            for (String file : args_in) {
-                String file_path = String.format("files/%s", file);
-                System.out.println("\nDefinição: " + wordDefinition(file_path, tradutor));
-            }
-        } else if (option == 2) {
-            for (String file : args_in) {
-                String file_path = String.format("files/%s", file);
-                System.out.println("\nTradução: " + translate(file_path, tradutor));
-            }
         } else {
-            System.out.println("\nOpção inválida");
+            input = args[0];
         }
-        sc.close();
+
+        String[] args_in = input.split(" ");
+ 
+        String dict_path = String.format("files/%s", args_in[0]);
+         
+        loadDictionary(dict_path, tradutor);
+
+        args_in = Arrays.copyOfRange(args_in, 1, args_in.length);
+        /* 
+
+        for (String file : args_in) {
+            String file_path = String.format("files/%s", file);
+            System.out.println("Tradução: " + translate(file_path, tradutor));
+        } 
+        System.out.println(); */ 
+
+        /////////////////////////////////////////////////////////////
+        
+        //loadDictionary(dict_path, tradutor);
+
+        for (String file : args_in) {
+            String file_path = String.format("files/%s", file);
+            System.out.println("Definição: " + String.join(" ", wordDefinition(file_path, tradutor)));
+        }
+
     }
 
     public static void loadDictionary(String path, HashMap<String, String> dict) {
@@ -69,7 +60,7 @@ public class ex6 {
             sc.close();
 
         } catch (Exception e) {
-            System.out.println("\nErro ao ler o ficheiro");
+            System.out.println("Erro ao ler o ficheiro");
         }
     }
 
@@ -94,43 +85,41 @@ public class ex6 {
             sc.close();
 
         } catch (Exception e) {
-            System.out.println("\nErro ao ler o ficheiro");
+            System.out.println("Erro ao ler o ficheiro");
         }
         return result;
     }
 
     public static String wordDefinition(String file, HashMap<String, String> dict) {
         String texto = "";
-        String[] result;
-
+        String result[] = new String[0];
         try {
             File f = new File(file);
             System.out.println(String.format("\nCaminho absoluto do arquivo (%s): " + f.getAbsolutePath(), f.getName()));
 
             Scanner sc = new Scanner(f);
             while (sc.hasNextLine()) {
-                texto += sc.nextLine() + " ";
+                texto += sc.nextLine() + " "; 
             }
-            sc.close();
-
             System.out.println("Texto: " + texto);
+            sc.close();
 
             boolean flag = true;
             while (flag) {
-                flag = false; 
-                result = texto.trim().split(" ");
-                for (int i = 0; i < result.length; i++) {
-                    if (dict.containsKey(result[i])) {
-                        result[i] = dict.get(result[i]); 
-                        flag = true; 
+                result = texto.split(" ");
+                for (String word : result) {
+                    if (dict.containsKey(word)) {
+                        int i = Arrays.asList(result).indexOf(word);
+                        result[i] = dict.get(word);
+                        flag = true;
+                    } else {
+                        flag = false;
                     }
                 }
-                texto = String.join(" ", result);
             }
-
         } catch (Exception e) {
-            System.out.println("\nErro ao ler o ficheiro: " + e.getMessage());
+            System.out.println("Erro ao ler o ficheiro");
         }
-        return texto.trim(); 
+        return Arrays.toString(result);
     }
 }
