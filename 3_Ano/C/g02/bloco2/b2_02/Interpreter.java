@@ -1,0 +1,57 @@
+@SuppressWarnings("CheckReturnValue")
+public class Interpreter extends SuffixCalculatorBaseVisitor<Double> {
+
+   @Override public Double visitProgram(SuffixCalculatorParser.ProgramContext ctx) {
+      Double res = null;
+      return visitChildren(ctx);
+      //return res;
+   }
+
+   @Override public Double visitStat(SuffixCalculatorParser.StatContext ctx) {
+      if (ctx.expr() != null) {
+         Double result = visit(ctx.expr());
+         System.out.println(result);
+      }
+      return visitChildren(ctx);
+   }
+
+   @Override public Double visitExprNumber(SuffixCalculatorParser.ExprNumberContext ctx) {
+      return visit(ctx.unaryExpr());
+   }
+
+   @Override public Double visitExprSuffix(SuffixCalculatorParser.ExprSuffixContext ctx) {
+      Double exp1 = visit(ctx.expr(0));
+      Double exp2 = visit(ctx.expr(1));   
+      String op = ctx.op.getText();
+      switch (op) {
+         case "*":
+            return exp1 * exp2;
+         case "/":
+            if (exp2 == 0) {
+               return null;
+            }
+            return exp1 / exp2;
+         case "+":
+            return exp1 + exp2;
+         case "-":
+            return exp1 - exp2;
+         default:
+            return null;
+      }
+   }
+
+   @Override public Double visitUnaryExpr(SuffixCalculatorParser.UnaryExprContext ctx) {
+      Double res = Double.parseDouble(ctx.Number().getText());
+      
+      if (ctx.getChildCount() == 2) {
+         String unaryExpr = ctx.getChild(0).getText();
+         switch (unaryExpr) {
+            case "-":
+               return -res;
+            default:
+               return res;
+         }
+      }
+      return res;
+   }
+}
