@@ -9,19 +9,19 @@ public class Interpreter extends SuffixCalculatorBaseVisitor<Double> {
 
    @Override public Double visitStat(SuffixCalculatorParser.StatContext ctx) {
       if (ctx.expr() != null) {
-         Double result = visit(ctx.expr());
-         System.out.println(result);
+         Double res = visit(ctx.expr());
+         System.out.println(res);
       }
       return visitChildren(ctx);
    }
 
    @Override public Double visitExprNumber(SuffixCalculatorParser.ExprNumberContext ctx) {
-      return visit(ctx.unaryExpr());
+      return Double.parseDouble(ctx.Number().getText());
    }
 
    @Override public Double visitExprSuffix(SuffixCalculatorParser.ExprSuffixContext ctx) {
       Double exp1 = visit(ctx.expr(0));
-      Double exp2 = visit(ctx.expr(1));   
+      Double exp2 = visit(ctx.expr(1));
       String op = ctx.op.getText();
       switch (op) {
          case "*":
@@ -38,20 +38,5 @@ public class Interpreter extends SuffixCalculatorBaseVisitor<Double> {
          default:
             return null;
       }
-   }
-
-   @Override public Double visitUnaryExpr(SuffixCalculatorParser.UnaryExprContext ctx) {
-      Double res = Double.parseDouble(ctx.Number().getText());
-      
-      if (ctx.getChildCount() == 2) {
-         String unaryExpr = ctx.getChild(0).getText();
-         switch (unaryExpr) {
-            case "-":
-               return -res;
-            default:
-               return res;
-         }
-      }
-      return res;
    }
 }

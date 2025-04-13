@@ -10,11 +10,8 @@ stat:
 
 expr:
     expr expr op=( '*' | '/' | '+' | '-' )     #ExprSuffix     // expressão pós-fixa (3 3 +)
-    | unaryExpr                                #ExprNumber     // expressao pode ser um numero apenas
-    ;  
-
-unaryExpr:
-    ( '-' | '+' )? Number ;
+    | Number                                #ExprNumber     // expressao pode ser um numero apenas
+    ; 
 
 Number: [0-9]+ ('.' [0-9]+)? ;      // Número real com ponto fixo (pode ser um número inteiro ou decimal)
                                     // [0-9]+ -> Um ou mais dígitos de 0 a 9 (parte inteira do número)
